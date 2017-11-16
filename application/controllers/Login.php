@@ -45,12 +45,10 @@ class Login extends CI_Controller
 			if($this->Usuarios->existe($username, $password)) 
 			{
 				$this->load->view('menu');	
-				// $this->load->view('menu');
 			}
 			else
 			{	
 				$this->load->view('login/error');
-				// $this->load->view('login/error');
 			}
 		}
 	}
