@@ -43,12 +43,14 @@ class Login extends CI_Controller
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');	
 			if($this->Usuarios->existe($username, $password)) 
-			{	
-				$this->load->view('menu');
+			{
+				$this->load->view('login/error');	
+				// $this->load->view('menu');
 			}
 			else
-			{
-				$this->load->view('login/error');
+			{	
+				$this->load->view('menu');
+				// $this->load->view('login/error');
 			}
 		}
 	}
