@@ -35,6 +35,7 @@ class Login extends CI_Controller
 	// INICIO FUNCIONES DE USUARIOS
 	public function validar() 
 	{
+
 		if ( ! $this->input->post('username') && ! $this->input->post('password'))
 		{
 			redirect('Login/entrada');
@@ -44,11 +45,13 @@ class Login extends CI_Controller
 			$password = $this->input->post('password');	
 			if($this->Usuarios->existe($username, $password)) 
 			{
-				$this->load->view('menu');	
+				$data = $arrayName = array('usuario' => $username , 'clave' => $password);
+				$this->session->set_userdata($data);
+				$this->load->view('menu'); 
 			}
 			else
 			{	
-				$this->load->view('login/error');
+				$this->load->view('login/error'); 	
 			}
 		}
 	}

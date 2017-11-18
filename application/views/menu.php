@@ -236,6 +236,6 @@
 <div>
 	<h1>BUY TICKET</h1>
 </div>
-
+<p>üsu = <?php echo $this->session->userdata('usuario'); ?></p>
 </body>
 </html>
