@@ -166,7 +166,7 @@
         </form>
       </div>
     </div>
-      <div name="dlg" id="dlg" class="easyui-dialog" style="width:300px;height:300px;padding:10px 20px" closed="true" buttons="#dlg-buttons">
+      <div name="dlg" id="dlg" class="easyui-dialog" style="width:300px;height:360px;padding:10px 20px" closed="true" buttons="#dlg-buttons">
         <div class="formulariotitle">Datos Usuario</div>
         <form id="formulario" name="formulario" method="post" action="agregar">
           <input id="idd" name="idd" type="hidden">

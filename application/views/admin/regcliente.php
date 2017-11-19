@@ -46,9 +46,9 @@
                 <span></span>
                 <input id="pe1" name="pe1" style="line-height:18px;border:1px solid #ccc"/>
                 <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">Buscar</a>
-                <a href="volverinicio" class="easyui-linkbutton" iconCls="icon-back" plain="true">atras</a>
+                <a href="retroceder" class="easyui-linkbutton" iconCls="icon-back" plain="true">atras</a>
             </div>
-            <div name="dlg" id="dlg" class="easyui-dialog" style="width:300px;height:300px;padding:10px 20px" closed="true"
+            <div name="dlg" id="dlg" class="easyui-dialog" style="width:300px;height:360px;padding:10px 20px" closed="true"
                 buttons="#dlg-buttons">
                 <div class="formulariotitle">Datos Usuario</div>
                 <form id="formulario" name="formulario" method="post" action="agregar">
