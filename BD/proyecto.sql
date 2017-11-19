@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2017 a las 01:59:32
+-- Tiempo de generación: 19-11-2017 a las 23:18:35
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -33,17 +33,20 @@ CREATE TABLE `cliente` (
   `nombre` varchar(50) NOT NULL,
   `cedula` varchar(10) NOT NULL,
   `direccion` varchar(50) NOT NULL,
-  `telefono` varchar(10) NOT NULL
+  `telefono` varchar(10) NOT NULL,
+  `user_cliente` varchar(50) NOT NULL,
+  `clv_cliente` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nombre`, `cedula`, `direccion`, `telefono`) VALUES
-(1, 'jorge', '1234', 'car', '4321'),
-(2, 'diego', '454567', 'crae', '65432'),
-(3, 'sebastian', '45678', 'cr5', '7654');
+INSERT INTO `cliente` (`id`, `nombre`, `cedula`, `direccion`, `telefono`, `user_cliente`, `clv_cliente`) VALUES
+(1, 'jorge', '1234', 'car', '4321', 'j3t', '123'),
+(2, 'diego', '454567', 'crae', '65432', 'dmh', '456'),
+(3, 'sebastian', '45678', 'cr5', '7654', 'sg', '789'),
+(4, 'daniel', '87654', 'cr6', '45678', 'dtb', '1092');
 
 -- --------------------------------------------------------
 
@@ -181,7 +184,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `empresa`
 --
