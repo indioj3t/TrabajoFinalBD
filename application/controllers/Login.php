@@ -49,8 +49,13 @@ class Login extends CI_Controller
 				$this->session->set_userdata($data);
 				$this->load->view('menu'); 
 			}
-			else
+			else if($this->RegClientes->existe($username, $password))
 			{	
+				$data = $arrayName = array('usuario' => $username , 'clave' => $password);
+				$this->session->set_userdata($data);
+				$this->load->view('menu'); 
+			}
+			else{
 				$this->load->view('login/error'); 	
 			}
 		}
