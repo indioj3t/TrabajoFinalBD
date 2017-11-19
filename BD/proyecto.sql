@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2017 a las 23:18:35
+-- Tiempo de generación: 19-11-2017 a las 23:50:55
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -96,6 +96,19 @@ INSERT INTO `origen_destino` (`id`, `origendestino`, `tiempo`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `taquilla`
+--
+
+CREATE TABLE `taquilla` (
+  `id` int(9) NOT NULL,
+  `destino` varchar(50) NOT NULL,
+  `origen` varchar(50) NOT NULL,
+  `precio` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tbl_producción`
 --
 
@@ -165,6 +178,12 @@ ALTER TABLE `origen_destino`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `taquilla`
+--
+ALTER TABLE `taquilla`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `tbl_visita`
 --
 ALTER TABLE `tbl_visita`
@@ -195,6 +214,11 @@ ALTER TABLE `empresa`
 --
 ALTER TABLE `origen_destino`
   MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `taquilla`
+--
+ALTER TABLE `taquilla`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `tbl_visita`
 --

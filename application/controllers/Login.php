@@ -55,7 +55,8 @@ class Login extends CI_Controller
 				$this->session->set_userdata($data);
 				$this->load->view('menu'); 
 			}
-			else{
+			else
+			{
 				$this->load->view('login/error'); 	
 			}
 		}
