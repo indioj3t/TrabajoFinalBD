@@ -45,6 +45,8 @@ class RegCliente extends CI_Controller
 			$ced = $this->input->post('cedula');
 			$dir = $this->input->post('direccion');
 			$tel = $this->input->post('telefono');
+			$usr = $this->input->post('user_cliente');
+			$clv = $this->input->post('clv_cliente');
 			if (! $this->input->post('idd')) 
 			{
 				if(!$this->RegClientes->existe(0, $nit)) 
@@ -53,7 +55,9 @@ class RegCliente extends CI_Controller
 					$dat1 = array('cedula' => $ced);
 					$dat2 = array('direccion' => $dir);
 					$dat3 = array('telefono' => $tel);
-					$this->RegClientes->insertar($dat, $dat1, $dat2, $dat3);
+					$dat4 = array('user_cliente' => $usr);
+					$dat5 = array('clv_cliente' => $clv);
+					$this->RegClientes->insertar($dat, $dat1, $dat2, $dat3, $dat4, $dat5);
 				} 
 			} else 
 			{
@@ -62,7 +66,9 @@ class RegCliente extends CI_Controller
 				$dat1 = array('cedula' => $ced);
 				$dat2 = array('direccion' => $dir);
 				$dat3 = array('telefono' => $tel);
-				$this->RegClientes->actualizar($dat, $dat1, $dat2, $dat3, $idd);
+				$dat4 = array('user_cliente' => $usr);
+				$dat5 = array('clv_cliente' => $clv);
+				$this->RegClientes->actualizar($dat, $dat1, $dat2, $dat3, $dat4, $dat5, $idd);
 				//$this->session->set_userdata('msg', 'Equipo '. $nombre . '(' . $region . ') editado correctamente');
 			}
 			redirect('RegCliente/regcliente');

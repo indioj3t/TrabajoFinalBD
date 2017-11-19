@@ -179,6 +179,10 @@
             <input id="direccion" name="direccion" class="easyui-textbox" required="true">
             <label>Telefono:</label>
             <input id="telefono" name="telefono" class="easyui-textbox" required="true">
+            <label>Nombre Usuario:</label>
+            <input id="usercli" name="usercli" class="easyui-textbox" required="true">
+            <label>Clave Usiario:</label>
+            <input id="clvcli" name="clvcli" class="easyui-textbox" required="true">
           </div>
         </form>
       </div>

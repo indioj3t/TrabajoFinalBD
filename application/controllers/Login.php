@@ -38,7 +38,7 @@ class Login extends CI_Controller
 
 		if ( ! $this->input->post('username') && ! $this->input->post('password'))
 		{
-			redirect('Login/entrada');
+			redirect('login/entrada');
 		} else 
 		{
 			$username = $this->input->post('username');

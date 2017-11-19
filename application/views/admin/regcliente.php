@@ -20,6 +20,8 @@
                     <th field="cedula" width="50">Cedula</th>
                     <th field="direccion" width="50">Direccion</th>
                     <th field="telefono" width="50">Telefono</th>
+                    <th field="user_cliente" width="50">Usuario</th>
+                    <th field="clv_cliente" width="50">Clave Usuario</th>
                     </tr>
                 </thead>
                 <?php foreach($listRegClientes as $cliente): ?>
@@ -31,6 +33,8 @@
                     <td>'.$cliente['cedula'].'</td>
                     <td>'.$cliente['direccion'].'</td>
                     <td>'.$cliente['telefono'].'</td>
+                    <td>'.$cliente['user_cliente'].'</td>
+                    <td>'.$cliente['clv_cliente'].'</td>
                     </tr>';
                 ?>
                 <?php endforeach; ?>
@@ -58,6 +62,10 @@
                         <input id="direccion" name="direccion" class="easyui-textbox" required="true">
                         <label>Telefono:</label>
                         <input id="telefono" name="telefono" class="easyui-textbox" required="true">
+                        <label>Nombre Usuario:</label>
+                        <input id="user_cliente" name="user_cliente" class="easyui-textbox" required="true">
+                        <label>Clave Usiario:</label>
+                        <input id="clv_cliente" name="clv_cliente" class="easyui-textbox" required="true">
                     </div>
                 </form>
             </div>

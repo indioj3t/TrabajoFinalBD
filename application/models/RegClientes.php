@@ -5,13 +5,13 @@ class RegClientes extends CI_Model
 	{
         parent::__construct();
 	}
-	public function insertar($nombre, $cedula, $direccion, $telefono)
+	public function insertar($nombre, $cedula, $direccion, $telefono, $user_cliente, $clv_cliente)
 	{
-		return $this->db->insert('cliente', $nombre + $cedula + $direccion + $telefono);
+		return $this->db->insert('cliente', $nombre + $cedula + $direccion + $telefono + $user_cliente + $clv_cliente);
 	}
-	public function actualizar($nombre, $cedula, $direccion, $telefono, $id) 
+	public function actualizar($nombre, $cedula, $direccion, $telefono, $user_cliente, $clv_cliente, $id) 
 	{
-		return $this->db->update('cliente', $nombre + $cedula + $direccion + $telefono, compact('id'));
+		return $this->db->update('cliente', $nombre + $cedula + $direccion + $telefono + $user_cliente + $clv_cliente, compact('id'));
 	}
 	public function eliminar($id) 
 	{
