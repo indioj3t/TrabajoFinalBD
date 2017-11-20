@@ -159,9 +159,9 @@
     <div class="login-page">
       <div class="form">
         <form class="login-form" method="post" action="index.php/Login/validar">
-          <input type="text" placeholder="Usiario" name="username"/>
+          <input type="text" placeholder="Usuario" name="username"/>
           <input type="password" placeholder="Contraseña" name="password"/>
-          <button>Iniciar Cesion</button>
+          <button>Iniciar Sesion</button>
           <a href="javascript:void(0)" class="easyui-linkbutton" onclick="nuevo()">Crea Una Cuenta</a>
         </form>
       </div>

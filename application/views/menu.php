@@ -206,8 +206,8 @@
 	    	</li>
 	    	<li class="drop"><a href="#">Taquilla</a>
 	    		<ul class="sub_menu">
-	    			<li><a href="#">Tiquetes Recervados</a></li>
-					<li><a href="#">Tiquetes Comprados</a></li>
+	    			<li><a href="Taquillas">Tiquetes Reservados</a></li>
+					<li><a href="Tiquetes">Tiquetes Comprados</a></li>
 					<li><a href="#">Destinos</a></li>		
 	    		</ul>
 	    	</li>
