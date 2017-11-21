@@ -22,6 +22,11 @@ class Login extends CI_Controller
 	{
 		redirect('RegCliente/home');
 	}
+
+	public function Taquillas() 
+	{
+		redirect('Taquilla/home');
+	}
 /*
 	public function RegCliente2() 
 	{

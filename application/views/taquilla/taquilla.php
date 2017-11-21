@@ -28,7 +28,7 @@
         <?php foreach($listTaquillas as $taquilla): ?>
         <?php
             echo '<tr>
-                        <td>'.$taquilla['Id'].'</td>
+                        <td>'.$taquilla['id'].'</td>
                         <td>'.$taquilla['origen'].'</td>
                         <td>'.$taquilla['destino'].'</td>
                         <td>'.$taquilla['precio'].'</td>
