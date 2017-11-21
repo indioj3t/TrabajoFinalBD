@@ -46,9 +46,9 @@ class RegClientes extends CI_Model
 		$res=$query->row_array();
 		return $res['nombre'];
 	}
-	public function existe($usuario_id, $clave) 
+	public function existe($user_cliente, $clv_cliente) 
 	{
-		$this->db->from('cliente', 'clave');
+		$this->db->from('cliente');
 		$this->db->where(compact('user_cliente', 'clv_cliente'));
 		return ($this->db->count_all_results() > 0) ? TRUE : FALSE;
 	}
