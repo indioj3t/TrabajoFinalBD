@@ -6,6 +6,7 @@ class Login extends CI_Controller
 	{
 		parent::__construct();
 	}
+	
 	public function index() 
 	{
 		$this->load->view('login/entrada');
@@ -26,6 +27,10 @@ class Login extends CI_Controller
 	public function Taquillas() 
 	{
 		redirect('Taquilla/home');
+	}
+	public function Tiquetes() 
+	{
+		redirect('Tiquete/home');
 	}
 /*
 	public function RegCliente2() 
@@ -48,18 +53,17 @@ class Login extends CI_Controller
 		{
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');	
-			$data = $arrayName = array('usuario' => $username , 'clave' => $password);
-			$this->session->set_userdata($data);
 			if($this->Usuarios->existe($username, $password)) 
 			{
-				
+				$data = $arrayName = array('usuario' => $username , 'clave' => $password);
+				$this->session->set_userdata($data);
 				$this->load->view('menu'); 
 			}
 			else if($this->RegClientes->existe($username, $password))
 			{	
-				$datas = $arrayName = array('usuario' => $username );
-				$this->session->set_userdata($datas);
-				redirect('Taquilla/cliente');
+				$data = $arrayName = array('usuario' => $username , 'clave' => $password);
+				$this->session->set_userdata($data);
+				$this->load->view('menu'); 
 			}
 			else
 			{
