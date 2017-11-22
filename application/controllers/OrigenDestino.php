@@ -15,9 +15,22 @@ class OrigenDestino extends CI_Controller
 	{
 		$this->load->view('menu');
 	}
-	public function admin() 
+	public function Admin() 
 	{
 		redirect('Admin/home');
+	}
+	public function Empresa() 
+	{
+		redirect('Empresa/home');
+	}
+	public function RegCliente() 
+	{
+		redirect('RegCliente/home');
+	}
+
+	public function Taquillas() 
+	{
+		redirect('Taquilla/home');
 	}
 	public function home() 
 	{	

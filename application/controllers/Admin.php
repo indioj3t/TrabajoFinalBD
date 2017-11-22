@@ -15,18 +15,29 @@ class Admin extends CI_Controller
 	{
 		$this->load->view('menu' );
 	}
-	public function admin() 
+	public function Admin() 
 	{
 		redirect('Admin/home');
 	}
-	public function empresa() 
+	public function Empresa() 
 	{
 		redirect('Empresa/home');
 	}
-	public function regcliente() 
+	public function RegCliente() 
 	{
 		redirect('RegCliente/home');
 	}
+
+	public function Taquillas() 
+	{
+		redirect('Taquilla/home');
+	}
+/*
+	public function RegCliente2() 
+	{
+		redirect('RegCliente/agregar');
+	}
+*/
 	public function OrigenDestino() 
 	{
 		redirect('OrigenDestino/home');

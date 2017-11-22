@@ -12,6 +12,33 @@ class Tbl_produccion extends CI_Controller
 		redirect('Admin/home');
 		//header('location:Admin/home');
 	}
+	public function Admin() 
+	{
+		redirect('Admin/home');
+	}
+	public function Empresa() 
+	{
+		redirect('Empresa/home');
+	}
+	public function RegCliente() 
+	{
+		redirect('RegCliente/home');
+	}
+
+	public function Taquillas() 
+	{
+		redirect('Taquilla/home');
+	}
+/*
+	public function RegCliente2() 
+	{
+		redirect('RegCliente/agregar');
+	}
+*/
+	public function OrigenDestino() 
+	{
+		redirect('OrigenDestino/home');
+	}
 	public function home()
 	{	
 		$data['listTbl'] = $this->tbl_produccion->listar();

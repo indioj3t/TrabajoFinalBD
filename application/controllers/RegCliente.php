@@ -19,9 +19,28 @@ class RegCliente extends CI_Controller
 	{
 		$this->load->view('login/entrada');
 	}
-	public function admin() 
+	public function Admin() 
 	{
 		redirect('Admin/home');
+	}
+	public function Empresa() 
+	{
+		redirect('Empresa/home');
+	}
+
+	public function Taquillas() 
+	{
+		redirect('Taquilla/home');
+	}
+/*
+	public function RegCliente2() 
+	{
+		redirect('RegCliente/agregar');
+	}
+*/
+	public function OrigenDestino() 
+	{
+		redirect('OrigenDestino/home');
 	}
 	public function home() 
 	{	
