@@ -29,6 +29,11 @@ class Taquilla extends CI_Controller {
 		$this->load->view('taquilla/taquilla', $data );
 	}
 
+	public function cliente() {	
+		$data['listTaquillas'] = $this->Taquillas->listar();
+		$this->load->view('taquilla/taquillaCliente', $data );
+	}
+
 	public function taquilla() {
 		$data['listTaquillas'] = $this->Taquillas->listar();
 		$this->load->view('taquilla/taquilla', $data );
@@ -76,10 +81,8 @@ class Taquilla extends CI_Controller {
 	}
 
 	public function eliminar() {
-
 		$idd = $this->input->post('idd');
 		$this->Taquillas->eliminar( $idd);
-		redirect('Taquilla/taquilla');
-		
+		redirect('Taquilla/taquilla');		
 	}
 }

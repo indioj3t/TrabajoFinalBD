@@ -48,17 +48,18 @@ class Login extends CI_Controller
 		{
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');	
+			$data = $arrayName = array('usuario' => $username , 'clave' => $password);
+			$this->session->set_userdata($data);
 			if($this->Usuarios->existe($username, $password)) 
 			{
-				$data = $arrayName = array('usuario' => $username , 'clave' => $password);
-				$this->session->set_userdata($data);
+				
 				$this->load->view('menu'); 
 			}
 			else if($this->RegClientes->existe($username, $password))
 			{	
-				$data = $arrayName = array('usuario' => $username , 'clave' => $password);
-				$this->session->set_userdata($data);
-				$this->load->view('menu'); 
+				$datas = $arrayName = array('usuario' => $username );
+				$this->session->set_userdata($datas);
+				redirect('Taquilla/cliente');
 			}
 			else
 			{
